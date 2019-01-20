@@ -35,6 +35,8 @@ public class TMCController {
         HttpSession session = request.getSession();
         session.setAttribute("openid", wechatInfo.getOpenid());
         session.setAttribute("session_key", wechatInfo.getSession_key());
+        System.out.println("openId: " + wechatInfo.getOpenid());
+        System.out.println("session_key: " + wechatInfo.getSession_key());
         String sessionId = request.getSession().getId();
 		return sessionId;
     }
